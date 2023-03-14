@@ -84,10 +84,4 @@ Write-Host ""
 Write-Host "DNS Settings at VNet level"
 Write-Host "--------------------"
 Get-AzVirtualNetwork -Name $vmVNet | select -ExpandProperty dhcpoptionstext  
-###Left to do: Print VNet and show get-azvirtualnetwork command with saved variable. Same with subnet and show whether 
-### DNS is on NIC or virtual network settings. 
-### Virtual Network its DHCPoptions Get-AzVirtualNetwork -Name $virtualNetwork | select -ExpandProperty dhcpoptionstext
-
-#(Get-AzNetworkInterface -ResourceId $vm.NetworkProfile.NetworkInterfaces.id).IpConfigurations.subnettext
-#(Get-AzNetworkInterface -ResourceId $vm.NetworkProfile.NetworkInterfaces.id).IpConfigurations.privateipaddress
 
